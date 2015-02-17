@@ -3,31 +3,26 @@ session_start();
 if(isset($_POST['login']) && isset($_POST['passwd'])) {
 	$login = $_POST['login'];
 	$passwd = $_POST['passwd'];
-	$var = false;
 
 	include '../../include/bdd.php';
 
-	$requete = $bdd->prepare('SELECT login, passwd, admin FROM CLIENT WHERE login=?');
-	$requete->execute(array($login));
+	$requete = $bdd->prepare('SELECT admin FROM CLIENT WHERE login=? AND passwd=?');
+	$requete->execute(array($login, $passwd));
 
-	while($donnees = $requete->fetch()) {
-		if ($donnees['passwd'] == $passwd) {
-			
+	if($donnees = $requete->fetch()) {
 			$_SESSION['login'] = $login;
 			$_SESSION['passwd'] = $passwd;
 
 			if ($donnees['admin']) {
-				header('location: ../../back/vue/accueil.php');
+				header('location: ../../back/vue/accueil.php');exit();
 			}
 			else {
-				header('location: ../..front/vue/accueil.php');
+				header('location: ../..front/vue/accueil.php');exit();
 			}
-		}
 	}
-	$var = true;
-	if ($var == true) header('location: ../vue/login.php?response=false');
+	else header('location: ../vue/login.php?response=false');exit();
 }
 else {
-	header('location: ../vue/login.php?message=ici');
+	header('location: ../vue/login.php?message=ici');exit();
 }
  ?>
