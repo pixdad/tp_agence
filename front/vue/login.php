@@ -8,7 +8,7 @@
 
 <h1>Connexion</h1>
 <div>
-	<form action="../script/login.php" method="post">
+	<form action="../script/login_scr.php" method="post">
 		<fieldset>
 			<legend>Connexion</legend>
 			<input type="text" name="login"	placeholder="Saisissez votre login ...">
