@@ -1,3 +1,5 @@
+<?php include '../../include/script/secur_front.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
