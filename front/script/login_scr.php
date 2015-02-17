@@ -3,6 +3,7 @@ session_start();
 if(isset($_POST['login']) && isset($_POST['passwd'])) {
 	$login = $_POST['login'];
 	$passwd = $_POST['passwd'];
+	$var = false;
 
 	include '../../include/bdd.php';
 
@@ -19,9 +20,14 @@ if(isset($_POST['login']) && isset($_POST['passwd'])) {
 				header('location: ../../back/vue/accueil.php');
 			}
 			else {
-				else header('location: ../..front/vue/accueil.php');
+				header('location: ../..front/vue/accueil.php');
 			}
 		}
 	}
+	$var = true;
+	if ($var == true) header('location: ../vue/login.php?response=false');
+}
+else {
+	header('location: ../vue/login.php?message=ici');
 }
  ?>
