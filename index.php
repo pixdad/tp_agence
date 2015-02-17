@@ -1,12 +1,12 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['login']) && !isset($_SESSION['password'])) {
+if (!isset($_SESSION['login']) || !isset($_SESSION['password'])) {
 	header('location: front/vue/accueil.php');
 }
 else {
 
-	include 'include/bdd.php';
+	include 'include/script/bdd.php';
 
 	$login = Securite::bdd($_SESSION['login']);
 	$passwd = Securite::bdd($_SESSION['password']);
