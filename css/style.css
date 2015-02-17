@@ -28,7 +28,9 @@
 	src: url('../src/polices/Anders.ttf') format('truetype');
 }
 
-
+* {
+	box-sizing:border-box;
+}
 
 html, body {
 	font-size: 18px;
@@ -46,4 +48,9 @@ h1, h2, h3 {
 
 #one_page {
 	background-image: url(../src/img/avion_xl.jpg);
+	background-size: cover;
+	color:white;
+	padding:15px;
+	background-origin: 50% 50%;
+	background-position: 50% 50%;
 }
