@@ -1,0 +1,10 @@
+@import url(_prop.css);
+
+
+input, textarea {
+	padding:10px;
+	font
+	font-size: 20px;
+	border-radius: 5px;
+
+}
