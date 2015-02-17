@@ -1,4 +1,9 @@
 <?php 
+/* ========================================================================== *\
+ * Formulaire de login
+ * => ?false=id : erreur de login
+ * => ?flase=session : tentative d'accès à une page interdite
+\* ========================================================================== */
 $response = true;
 if (isset($_GET['false'])) {
 
@@ -21,7 +26,7 @@ if (isset($_GET['false'])) {
 <head>
 	<meta charset="UTF-8">
 	<title>Agence - Login</title>
-	<?php include '../../include/head.php'; ?>
+	<?php include '../../include/vue/head.php'; ?>
 </head>
 
 <body>

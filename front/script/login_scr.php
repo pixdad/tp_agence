@@ -1,10 +1,20 @@
 <?php 
+
+/* ========================================================================== *\
+ * $_GET deconnect = true : deconnexion
+ * $_POST login et passwd : connexion
+ * sinon : redirection vers vue/login.php
+\* ========================================================================== */
+
 session_start();
-if(isset($_POST['login']) && isset($_POST['passwd'])) {
+if (isset($_GET['deconnect']) && $_GET['deconnect']=='true') {
+	session_destroy();
+}
+else if(isset($_POST['login']) && isset($_POST['passwd'])) {
 	$login = $_POST['login'];
 	$passwd = $_POST['passwd'];
 
-	include '../../include/bdd.php';
+	include '../../include/script/bdd.php';
 
 	$requete = $bdd->prepare('SELECT admin FROM CLIENT WHERE login=? AND passwd=?');
 	$requete->execute(array($login, $passwd));
@@ -25,4 +35,9 @@ if(isset($_POST['login']) && isset($_POST['passwd'])) {
 else {
 	header('location: ../vue/login.php');exit();
 }
+
+
+
+
+
  ?>

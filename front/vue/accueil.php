@@ -3,9 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<?php include '../../include/head.php'; ?>
+	<?php include '../../include/vue/head.php'; ?>
 </head>
 <body>
-	<h1>Front Office</h1>
+	<header>
+		<h1>Travel'INT</h1>
+	</header>
+	
 </body>
 </html>
