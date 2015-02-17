@@ -1,7 +1,18 @@
 <?php 
 $response = true;
-if (isset($_GET['response']) && $_GET['response']=='false') {
+if (isset($_GET['false'])) {
+
 	$response = false;
+
+	switch ($_GET['false']) {
+		case 'id':
+		$message = "Identifiant ou mot de passe erroné";
+		break;
+
+		case 'session':
+		$message = "Vous devez vous connecter pour accéder à cette page";
+		break;
+	}
 }
  ?>
 
@@ -15,7 +26,7 @@ if (isset($_GET['response']) && $_GET['response']=='false') {
 
 <body>
 	<div id="contenu">
-		<?php if(!$response) {?><div class="alert">Identifiant ou mot de passe erroné</div><?php } ?>
+		<?php if(!$response) {?><div class="banner alert"><?=$message?></div><?php } ?>
 		<h1>Connexion</h1>
 		<section>
 			<form action="../script/login_scr.php" method="post">

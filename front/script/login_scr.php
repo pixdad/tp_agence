@@ -20,9 +20,9 @@ if(isset($_POST['login']) && isset($_POST['passwd'])) {
 				header('location: ../..front/vue/accueil.php');exit();
 			}
 	}
-	else header('location: ../vue/login.php?response=false');exit();
+	else header('location: ../vue/login.php?false=id');exit();
 }
 else {
-	header('location: ../vue/login.php?message=ici');exit();
+	header('location: ../vue/login.php');exit();
 }
  ?>

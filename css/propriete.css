@@ -3,10 +3,17 @@
 .ta-center {text-align: center;}
 .center {margin:auto;}
 
-.alert {
+/* Banner */
+.banner {
 	display:block;
-	background-color: #FF5B5B;
-	color:white;
 	padding:15px;
 	text-align: center;
+}
+.alert {
+	background-color: #FF5B5B;
+	color:white;
+}
+.info {
+	background-color: #FF5B5B;
+	color:white;
 }
