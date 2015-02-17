@@ -1,4 +1,49 @@
+/* POLICES */
+@font-face {
+    font-family: 'Quattrocento';
+    src: url('../src/polices/QuattrocentoSans-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Quattrocento';
+    font-style: italic;
+    src: url('../src/polices/QuattrocentoSans-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Quattrocento';
+    font-weight: bold;
+    src: url('../src/polices/QuattrocentoSans-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Quattrocento';
+    font-style:italic;
+    font-weight: bold
+    src: url('../src/polices/QuattrocentoSans-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Jaapo';
+	src: url('../src/polices/jaapokkienchance-regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Anders';
+	src: url('../src/polices/Anders.ttf') format('truetype');
+}
+
+
+
 html, body {
 	font-size: 18px;
 	margin: 0;padding: 0;
+	font-family:Quattrocento;
+	font-style: normal;
+}
+
+h1, h2, h3 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 4em;
+}
+
+
+#one_page {
+	background-image: url(../src/img/avion_xl.jpg);
 }

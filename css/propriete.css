@@ -17,3 +17,18 @@
 	background-color: #FF5B5B;
 	color:white;
 }
+
+.para {
+	width:100%;
+	max-width: 800px;
+	line-height: 160%;
+}
+
+.h0 {
+	display: block;
+	font-family: Anders;
+	font-size: 4rem;
+	letter-spacing: 0.5em;
+	word-spacing: 0.5em;
+	line-height: 3.5rem;
+}
