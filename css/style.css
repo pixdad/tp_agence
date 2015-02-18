@@ -96,6 +96,7 @@ table.full td {
 .circuit-btn {
 	padding:15px;
 	cursor:pointer;
+	border: 1px solid rgba(0,0,0,0.2)
 }
 .circuit-btn:hover, .circuit-btn-actif {
 	background-color: #1abc9c;

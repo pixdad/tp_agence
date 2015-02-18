@@ -15,9 +15,9 @@
 	</header>
 	<section class="section bg-fond-1">
 		<h2>Notre objectif</h2>
-		<p class="para center">
-			Vous fournir les meilleurs voyages, à petit prix
-		</p>
+		<div class="para center">
+			<div class="info-titre ta-center">Vous fournir les meilleurs voyages, à petit prix</div>
+		</div>
 	</section>
 	<section class="section bg-fond-2">
 		<h2>Actualités</h2>

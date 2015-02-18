@@ -96,6 +96,7 @@ bg-second-2 :#c0392b;
 }
 .bg-fond {background-color: white; color:#212121;}
 .bg-fond-2 {background-color: #EDEDED; color:#212121;}
+.bg-fond-sombre {background-color: #212121; color:white;}
 
 
 .button-xl {
