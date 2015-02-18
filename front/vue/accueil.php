@@ -30,7 +30,7 @@
 		</ul>
 	</section>
 
-	<section>
+	<section class="section">
 		<?php include '../script/circuit.php'; ?>
 	</section>
 	
