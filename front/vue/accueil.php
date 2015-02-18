@@ -10,6 +10,7 @@
 <body>
 	<header id="one_page">
 		<h1 class="h0 ta-center">Travel'INT<br/>Agency</h1>
+		<div class="ta-center marge-xl"><a href="#" class="button-xl bg-main wow bounceInUp">Découvrez</a></div>
 	</header>
 	
 	<script>

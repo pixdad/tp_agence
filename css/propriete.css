@@ -1,3 +1,12 @@
+/*
+
+bg-main : #1abc9c;
+bg-main-2 : #16a085;
+bg-second : #e74c3c;
+bg-second-2 :#c0392b;
+
+*/
+
 .ta-left {text-align: left;}
 .ta-right {text-align: right;}
 .ta-center {text-align: center;}
@@ -31,4 +40,19 @@
 	letter-spacing: 0.5em;
 	word-spacing: 0.5em;
 	text-shadow:2px 2px 2px black;
+}
+
+.bg-main {background-color: #1abc9c; color:white;}
+.bg-main-2 {background-color: #16a085; color:white;}
+.bg-second {background-color: #e74c3c; color:white;}
+.bg-second-2 {background-color: #c0392b; color:white;}
+
+.button-xl {
+	padding:25px;
+	line-height: 25px;
+	font-size: 25px;
+}
+
+.marge-xl {
+	margin:150px;
 }
