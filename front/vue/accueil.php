@@ -29,6 +29,10 @@
 			<li class="list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi placeat est maiores officia ab cupiditate dolorum earum unde, adipisci sapiente aliquid beatae sed temporibus vero hic incidunt quaerat quisquam magni.</li>
 		</ul>
 	</section>
+
+	<section>
+		<?php include '../script/circuit.php'; ?>
+	</section>
 	
 	<script>
 	$(function() {
