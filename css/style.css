@@ -78,3 +78,10 @@ table.full tr {
 table.full td {
 	padding:18px 0px;
 }
+
+.connect-links {
+	position:fixed;
+	top: 0;left: 0;right: 0;
+	color:white;
+	background-color: #212121;
+}

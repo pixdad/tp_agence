@@ -12,6 +12,9 @@ bg-second-2 :#c0392b;
 .ta-center {text-align: center;}
 .center {margin:auto;}
 
+.abs-left {display: inline-block;width:40%;text-align: left;}
+.abs-right {display: inline-block;width:40%;text-align: right;}
+
 .uppercase {text-transform: uppercase;}
 .thin {font-weight: lighter;}
 

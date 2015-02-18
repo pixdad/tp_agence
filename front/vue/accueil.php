@@ -8,6 +8,26 @@
 	<?php include '../../include/vue/head.php'; ?>
 </head>
 <body>
+	<header class="connect-links">
+<?php 
+if ($connecte) {
+?>
+		<span class="abs-left">Bienvenue <?=$nom?> <?=$prenom?>,</span>
+		<span class="abs-right"><a href="../script/login_scr.php?deconnect=true">Se déconnecter</a></span>
+		
+<?php
+}
+else {
+?>
+		<span class="abs-right"><form action="../script/login_scr.php" method="post">
+			<input type="text" name="login"	placeholder="login">
+			<input type="password" name="passwd" placeholder="mot de passe">
+			<input type="submit" value="Se connecter">
+		</form></span>
+<?php
+}
+?>
+	</header>
 	<header id="one_page">
 		<h1 class="h0 ta-center wow fadeInUp">Travel'INT<br/>Agency</h1>
 		<div class="ta-center marge-xl"><a href="#" class="button-xl uppercase thin bg-main wow zoomIn" data-wow-delay="0.5s">Découvrez</a></div>
