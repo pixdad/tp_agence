@@ -9,7 +9,6 @@
 session_start();
 
 $connecte = false;
-
 if (!isset($_SESSION['login']) || !isset($_SESSION['passwd'])) {
 	$connecte = false;
 }
@@ -29,6 +28,7 @@ else {
 			$nom = $donnees['nom'];
 			$adresse = $donnees['adresse'];
 			$passwd = ''; //On vide pour éviter de s'en servir dans le reste de la page (pour l'afficher, etc.)
+			$connecte = true;
 		}
 		else $connecte = false;
 	}

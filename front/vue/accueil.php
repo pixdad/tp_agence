@@ -31,6 +31,7 @@
 	</section>
 
 	<section class="section">
+		<h2>Circuits proposés</h2>
 		<?php include '../script/circuit.php'; ?>
 	</section>
 	

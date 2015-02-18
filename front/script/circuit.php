@@ -37,3 +37,4 @@ while($donnees = $requete->fetch())
 }
 ?>
 </table>
+<?php if($connecte) echo("true"); else echo("false"); ?>
