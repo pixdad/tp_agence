@@ -10,7 +10,7 @@ session_start();
 
 $connecte = false;
 
-if (!isset($_SESSION['login']) || !isset($_SESSION['password'])) {
+if (!isset($_SESSION['login']) || !isset($_SESSION['passwd'])) {
 	$connecte = false;
 }
 else {
@@ -18,7 +18,7 @@ else {
 	include '../../include/script/bdd.php';
 
 	$login = $_SESSION['login'];
-	$passwd = $_SESSION['password'];
+	$passwd = $_SESSION['passwd'];
 
 	$requete = $bdd->prepare('SELECT prenom, nom, adresse, admin FROM CLIENT WHERE login=? AND passwd=?');
 	$requete->execute(array($login, $passwd));

@@ -4,6 +4,7 @@
  * => ?false=id : erreur de login
  * => ?flase=session : tentative d'accès à une page interdite
 \* ========================================================================== */
+$message="vide";
 $response = true;
 if (isset($_GET['false'])) {
 

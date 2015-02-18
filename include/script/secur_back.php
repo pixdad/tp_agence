@@ -7,7 +7,7 @@
 
 session_start();
 
-if (!isset($_SESSION['login']) || !isset($_SESSION['password'])) {
+if (!isset($_SESSION['login']) || !isset($_SESSION['passwd'])) {
 	header('location: ../../front/vue/login.php?false=session');
 }
 else {
@@ -15,7 +15,7 @@ else {
 	include '../../include/script/bdd.php';
 
 	$login = $_SESSION['login'];
-	$passwd = $_SESSION['password'];
+	$passwd = $_SESSION['passwd'];
 
 	$requete = $bdd->prepare('SELECT prenom, nom, adresse, admin FROM CLIENT WHERE login=? AND passwd=?');
 	$requete->execute(array($login, $passwd));
@@ -26,6 +26,6 @@ else {
 		$adresse = $donnees['adresse'];
 		$passwd = ''; //On vide pour éviter de s'en servir dans le reste de la page (pour l'afficher, etc.)
 	}
-	else header('location: ../../front/vue/login.php?false=session');
+	//else header('location: ../../front/vue/login.php?false=session2');
 }
  ?>
