@@ -7,7 +7,7 @@ $mdp = 'Mardi19Fev';
 
 try
 {
-	$bdd = new PDO('mysql:host='.$serveur.';dbname='.$nombdd, $nomuser, $mdp);
+	$bdd = new PDO('mysql:host='.$serveur.';dbname='.$nombdd.';charset=utf8', $nomuser, $mdp);
 }
 catch (Exception $e)
 {

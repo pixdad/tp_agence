@@ -1,5 +1,5 @@
 <?php 
-include '../../include/script/secur_front.php';
+include_once '../../include/script/secur_front.php';
 
 $requete = $bdd->prepare('SELECT description, paysDepart , villeDepart, villeArrivee, dureeCircuit, dateDepart, nombrePersonnes, prix FROM CIRCUIT C, CIRCUITPROGRAMME P WHERE C.circuitID = P.circuitID');
 $requete->execute();
