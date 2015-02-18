@@ -27,8 +27,8 @@ else {
 			$adresse = $donnees['adresse'];
 			$passwd = ''; //On vide pour éviter de s'en servir dans le reste de la page (pour l'afficher, etc.)
 		}
-		else header('location: ../../front/vue/login.php?false=session2');
+		else header('location: ../../front/vue/login.php?false=session');
 	}
-	else header('location: ../../front/vue/login.php?false=session2');
+	else header('location: ../../front/vue/login.php?false=session');
 }
  ?>
