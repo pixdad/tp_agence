@@ -13,7 +13,8 @@ $requete->execute();
 	<td>Ville arrivée :</td>
 	<td>Durée circuit :</td>
 	<td>Date départ :</td>
-	<td>prix :</td>
+	<td>Prix :</td>
+	<td>Inscription :</td>
 </tr>
 <?php
 
@@ -29,6 +30,7 @@ while($donnees = $requete->fetch())
 	<td><?=$donnees['dureeCircuit']?></td>
 	<td><?=$donnees['dateDepart']?></td>
 	<td><?=$donnees['prix']?></td>
+	<td><a href="../script/inscription.php" class="button-sm">S'inscire</a></td>
 </tr>
 
 <?php
