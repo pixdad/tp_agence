@@ -7,14 +7,13 @@
 \* ========================================================================== */
 
 session_start();
+include '../../include/script/bdd.php';
 
 $connecte = false;
 if (!isset($_SESSION['login']) || !isset($_SESSION['passwd'])) {
 	$connecte = false;
 }
 else {
-
-	include '../../include/script/bdd.php';
 
 	$login = $_SESSION['login'];
 	$passwd = $_SESSION['passwd'];

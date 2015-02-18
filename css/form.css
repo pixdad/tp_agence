@@ -1,8 +1,12 @@
 
-input, textarea {
+.form input, .form textarea {
 	padding:10px;
-	font
 	font-size: 20px;
 	border-radius: 5px;
-
+}
+input, textarea {
+	padding:2px;
+	border-radius: 2px;
+	background-color: rgba(255,255,255,0.2);
+	border: 1px solid rgba(255,255,255,0.2);
 }

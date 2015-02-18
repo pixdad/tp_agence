@@ -18,6 +18,8 @@ bg-second-2 :#c0392b;
 .uppercase {text-transform: uppercase;}
 .thin {font-weight: lighter;}
 
+.hide {display: none;}
+
 /* Banner : utile pour les messages d'erreur; */
 .banner {
 	display:block;
@@ -38,6 +40,29 @@ bg-second-2 :#c0392b;
 	max-width: 800px;
 	line-height: 160%;
 }
+.para-large {
+	width:100%;
+	max-width: 1200px;
+	line-height: 160%;
+}
+
+/* Grille */
+.row {
+	display:block;
+	font-size:0;
+}
+.row > * {
+	font-size: 1rem;
+}
+.col {
+	display: inline-block;
+	vertical-align: top;
+}
+.col-25 {width: 25%;}
+.col-50 {width:50%;}
+.col-75 {width: 75%;}
+.col-100 {width: 100%;}
+
 
 .h0 {
 	display: block;
@@ -47,26 +72,61 @@ bg-second-2 :#c0392b;
 	word-spacing: 0.5em;
 	text-shadow:2px 2px 2px black;
 }
+.info-titre {
+	display:block;
+	font-size: 3rem;
+	line-height: 3.5rem;
+	margin:15px 0;
+}
 
-.bg-main {background-color: #1abc9c; color:white;}
+.bg-main {
+	background-color: 
+	#1abc9c; 
+	color: white;
+	transition: all 500ms ease;
+}
+.bg-main:hover, 
 .bg-main-2 {background-color: #16a085; color:white;}
 .bg-second {background-color: #e74c3c; color:white;}
-.bg-second-2 {background-color: #c0392b; color:white;}
+.bg-second:hover,
+.bg-second-2 {
+	background-color: #c0392b; 
+	color:white;
+	transition: all 500ms ease;
+}
 .bg-fond {background-color: white; color:#212121;}
-.bg-fond-2 {background-color: #DBDBDB; color:#212121;}
+.bg-fond-2 {background-color: #EDEDED; color:#212121;}
+
 
 .button-xl {
 	padding:25px;
 	line-height: 25px;
 	font-size: 25px;
+	display: inline-block;
+	cursor:pointer;
 }
 .button-sm {
 	padding:15px;
 	line-height: 15px;
 	font-size: 15px;
+	display: inline-block;
+	cursor:pointer;
+}
+.button-xs {
+	padding:5px;
+	line-height: 15px;
+	font-size: 15px;
+	display: inline-block;
+	cursor:pointer;
 }
 
 
 .marge-xl {
 	margin:150px;
+}
+
+ul.style-none {
+	list-style-type: none;
+	padding:0;
+	margin:0;
 }

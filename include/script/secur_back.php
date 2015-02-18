@@ -6,13 +6,12 @@
 \* ========================================================================== */
 
 session_start();
+include '../../include/script/bdd.php';
 
 if (!isset($_SESSION['login']) || !isset($_SESSION['passwd'])) {
 	header('location: ../../front/vue/login.php?false=session');
 }
 else {
-
-	include '../../include/script/bdd.php';
 
 	$login = $_SESSION['login'];
 	$passwd = $_SESSION['passwd'];

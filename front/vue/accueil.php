@@ -8,29 +8,10 @@
 	<?php include '../../include/vue/head.php'; ?>
 </head>
 <body>
-	<header class="connect-links">
-<?php 
-if ($connecte) {
-?>
-		<span class="abs-left">Bienvenue <?=$nom?> <?=$prenom?>,</span>
-		<span class="abs-right"><a href="../script/login_scr.php?deconnect=true">Se déconnecter</a></span>
-		
-<?php
-}
-else {
-?>
-		<span class="abs-right"><form action="../script/login_scr.php" method="post">
-			<input type="text" name="login"	placeholder="login">
-			<input type="password" name="passwd" placeholder="mot de passe">
-			<input type="submit" value="Se connecter">
-		</form></span>
-<?php
-}
-?>
-	</header>
+	<?php include '../../include/vue/header.php'; ?>
 	<header id="one_page">
 		<h1 class="h0 ta-center wow fadeInUp">Travel'INT<br/>Agency</h1>
-		<div class="ta-center marge-xl"><a href="#" class="button-xl uppercase thin bg-main wow zoomIn" data-wow-delay="0.5s">Découvrez</a></div>
+		<div class="ta-center marge-xl"><a href="#" class="button-xl uppercase thin bg-main  wow zoomIn" data-wow-delay="0.5s">Découvrez</a></div>
 	</header>
 	<section class="section bg-fond-1">
 		<h2>Notre objectif</h2>
@@ -40,7 +21,7 @@ else {
 	</section>
 	<section class="section bg-fond-2">
 		<h2>Actualités</h2>
-		<ul class="list-x">
+		<ul class="list-x para-large">
 			<li class="list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quod aut voluptas magni praesentium tenetur corrupti facilis doloremque cum, laudantium earum quaerat autem et totam quia dicta magnam fugiat dolore.</li>
 			<li class="list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perferendis magni quae maiores consequuntur, sequi ipsa debitis doloremque laudantium iure quisquam tempora quo velit iste molestias necessitatibus fuga, qui provident.</li>
 			<li class="list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptate dolores animi quisquam accusamus quo? Perspiciatis deleniti dolores, exercitationem doloremque. Similique quisquam soluta minus, incidunt necessitatibus cupiditate atque minima doloremque!</li>
@@ -52,7 +33,7 @@ else {
 
 	<section class="section">
 		<h2>Circuits proposés</h2>
-		<?php include '../script/circuit.php'; ?>
+		<?php include '_circuit.php'; ?>
 	</section>
 	
 	<script>

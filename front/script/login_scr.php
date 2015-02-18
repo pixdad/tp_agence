@@ -9,6 +9,7 @@
 session_start();
 if (isset($_GET['deconnect']) && $_GET['deconnect']=='true') {
 	session_destroy();
+	header('location: ../../front/vue/accueil.php');exit();
 }
 else if(isset($_POST['login']) && isset($_POST['passwd'])) {
 	$login = $_POST['login'];
