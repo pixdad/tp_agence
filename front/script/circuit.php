@@ -5,7 +5,7 @@ $requete = $bdd->prepare('SELECT description, paysDepart , villeDepart, villeArr
 $requete->execute();
 
 ?>
-<table>
+<table class="full ta-center">
 <tr>
 	<td>Description :</td>
 	<td>Pays départ :</td>
