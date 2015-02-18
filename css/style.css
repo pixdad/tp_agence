@@ -75,3 +75,6 @@ table.full {
 table.full tr {
 	width:100%;
 }
+table.full td {
+	padding:18px 0px;
+}

@@ -30,7 +30,7 @@ while($donnees = $requete->fetch())
 	<td><?=$donnees['dureeCircuit']?></td>
 	<td><?=$donnees['dateDepart']?></td>
 	<td><?=$donnees['prix']?></td>
-	<td><a <?php if ($connect == true) print("href=\"../script/inscription.php\""); else print("href=\"../vue/login.php\""); ?> class="button-sm bg-main">S'inscire</a></td>
+	<td><a <?php if ($connecte == true) print("href=\"../script/inscription.php\""); else print("href=\"../vue/login.php\""); ?> class="button-sm bg-main">S'inscire</a></td>
 </tr>
 
 <?php
