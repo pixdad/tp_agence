@@ -20,12 +20,15 @@ else {
 	$requete = $bdd->prepare('SELECT prenom, nom, adresse, admin FROM CLIENT WHERE login=? AND passwd=?');
 	$requete->execute(array($login, $passwd));
 
-	if($donnees = $requete->fetch() && $donnees['admin']) {
-		$prenom = $donnees['prenom'];
-		$nom = $donnees['nom'];
-		$adresse = $donnees['adresse'];
-		$passwd = ''; //On vide pour éviter de s'en servir dans le reste de la page (pour l'afficher, etc.)
+	if($donnees = $requete->fetch()) {
+		if ($donnees['admin']) {
+			$prenom = $donnees['prenom'];
+			$nom = $donnees['nom'];
+			$adresse = $donnees['adresse'];
+			$passwd = ''; //On vide pour éviter de s'en servir dans le reste de la page (pour l'afficher, etc.)
+		}
+		else header('location: ../../front/vue/login.php?false=session2');
 	}
-	//else header('location: ../../front/vue/login.php?false=session2');
+	else header('location: ../../front/vue/login.php?false=session2');
 }
  ?>
