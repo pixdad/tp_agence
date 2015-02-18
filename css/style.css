@@ -80,6 +80,9 @@ table.full tr {
 table.full td {
 	padding:5px 0px;
 }
+table {
+	margin:20px 0;
+}
 
 .connect-links {
 	color:white;

@@ -25,8 +25,8 @@ while($donnees = $requete->fetch())
 				</tr>
 				<?php 
 					$sql = 'SELECT dateDepart, prix, nombrePersonnes, P.programmationID, count(*) 
-							FROM CIRCUITPROGRAMME P, RESERVATION R 
-							WHERE P.programmationID = R.programmationID AND circuitID = ?
+							FROM CIRCUITPROGRAMME P LEFT OUTER JOIN RESERVATION R 
+							ON (P.programmationID = R.programmationID) WHERE circuitID = ?
 							GROUP BY P.programmationID';
 					$requete_p = $bdd->prepare($sql);
 					$requete_p->execute(array($donnees['circuitID']));
@@ -40,10 +40,10 @@ while($donnees = $requete->fetch())
 						<tr>
 							<td><?=$program['dateDepart']?></td>
 							<td><?=$program['prix']?>€</td>
-							<td><?=$program['nombrePersonnes']?></td>
+							<td><?=$place_restante?></td>
 							<td>
 								<?php if($connecte) { ?>
-									<form action="../script/reservation_scr.php">
+									<form action="../script/reservation_scr.php" method='post'>
 										<input type="hidden" name="clientID" value="<?=$id?>"><input type="hidden" name="pID" value="<?=$program['programmationID']?>">
 										<select name="mode" style="color:black" required><optgroup label="Mode de paiement"></option><option value="Cheque"/>Chèque<option value="CB"/>CB</optgroup></select>
 										<input type="submit" class="button-xs bg-second" value="Réserver">
@@ -64,5 +64,5 @@ while($donnees = $requete->fetch())
 	</ul>
 	</div>
 
-<script>$(function(){$( "circuit-btn:first" ).trigger( "click" );});</script>
+
 

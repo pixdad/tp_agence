@@ -4,3 +4,15 @@
 	Atout France : 5/9 rue Charles Fourier, 91000 EVRY - Déclaration CNIL: 1234567</p>
 </footer>
 <script>$(function(){$( "circuit-btn:first" ).trigger( "click" );});</script>
+<script>
+	function match(id_input1, id_input2) {
+		var $ipt1 = $(id_input1);
+		var $ipt2 = $(id_input2);
+		var expr = $ipt1.val()=="" || $ipt1.val()==$ipt2.val() ;
+		if(!expr) {
+			alert('Les mots de passe ne correpondent pas');
+			$ipt1.val("");$ipt2.val("");
+		}
+		return (expr);
+	}
+</script>

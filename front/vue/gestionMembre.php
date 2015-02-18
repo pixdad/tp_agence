@@ -20,6 +20,46 @@ if(!$connecte) {
 	</header>
 	<section class="section">
 		<h2>Espace membre : <?php echo "$nom $prenom" ?></h1>
+		<div class="para-large center">
+			<form action="../script/updateInfoCompte.php" method="post" onsubmit="return match('#pass', '#confirm-pass');">
+				<fieldset>
+					<legend>Modifier mes informations</legend>
+					<table class="center">
+						<tr>
+							<td>Nom* :</td>
+							<td><input name="nom" type="text" value="<?=$nom?>" required></td>
+						</tr>
+						<tr>
+							<td>Prénom* :</td>
+							<td><input name="prenom" type="text" value="<?=$prenom?>" required></td>
+						</tr>
+						<tr>
+							<td>Adresse* :</td>
+							<td><input name="adresse" type="text" value="<?=$adresse?>" required></td>
+						</tr>
+						<tr>
+							<td>Login* :</td>
+							<td><input name="login" type="text" value="<?=$login?>" required></td>
+						</tr>
+						<tr>
+							<td>Changer de mot de passe : </td>
+							<td><input id="pass" name="passwd" type="password"></td>
+						</tr>
+						<tr>
+							<td>Confirmer votre mot de passe : </td>
+							<td><input id="confirm-pass" type="password"></td>
+						</tr>
+					</table>
+					<input type="hidden" name="clientID" value="<?=$id?>">
+					<div class="h50"></div>
+					<div class="ta-center"><input type="submit" class="button-sm bg-second" value="Enregistrer"></div>
+				</fieldset>
+			</form>
+			<hr>
+			<fieldset>
+				<legend>Gérer mes réservations</legend>
+			</fieldset>
+		</div>
 	</section>
 	<?php include '../../include/vue/footer.php' ?>
 </body>
