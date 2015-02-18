@@ -1,4 +1,5 @@
 /* POLICES */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
 @font-face {
     font-family: 'Quattrocento';
     src: url('../src/polices/QuattrocentoSans-Regular.ttf') format('truetype');
@@ -35,7 +36,7 @@
 html, body {
 	font-size: 18px;
 	margin: 0;padding: 0;
-	font-family:Quattrocento;
+	font-family:Roboto, Quattrocento;
 	font-style: normal;
 }
 
@@ -45,6 +46,8 @@ h1, h2, h3 {
 	font-size: 4em;
 }
 
+a {text-decoration: none;}
+
 
 #one_page {
 	background-image: url(../src/img/avion_xl.jpg);
@@ -53,4 +56,8 @@ h1, h2, h3 {
 	padding:15px;
 	background-origin: 50% 50%;
 	background-position: 50% 50%;
+}
+
+.section {
+	padding: 50px 0;
 }

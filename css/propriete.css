@@ -12,7 +12,10 @@ bg-second-2 :#c0392b;
 .ta-center {text-align: center;}
 .center {margin:auto;}
 
-/* Banner */
+.uppercase {text-transform: uppercase;}
+.thin {font-weight: lighter;}
+
+/* Banner : utile pour les messages d'erreur; */
 .banner {
 	display:block;
 	padding:15px;
@@ -46,6 +49,8 @@ bg-second-2 :#c0392b;
 .bg-main-2 {background-color: #16a085; color:white;}
 .bg-second {background-color: #e74c3c; color:white;}
 .bg-second-2 {background-color: #c0392b; color:white;}
+.bg-fond {background-color: white; color:#212121;}
+.bg-fond-2 {background-color: #C0C0C0; color:#212121;}
 
 .button-xl {
 	padding:25px;
