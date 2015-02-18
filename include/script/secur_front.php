@@ -18,11 +18,12 @@ else {
 	$login = $_SESSION['login'];
 	$passwd = $_SESSION['passwd'];
 
-	$requete = $bdd->prepare('SELECT prenom, nom, adresse, admin FROM CLIENT WHERE login=? AND passwd=?');
+	$requete = $bdd->prepare('SELECT clientID, prenom, nom, adresse, admin FROM CLIENT WHERE login=? AND passwd=?');
 	$requete->execute(array($login, $passwd));
 
 	if($donnees = $requete->fetch()) {
 		if (!$donnees['admin']) {
+			$id = $donnees['clientID'];
 			$prenom = $donnees['prenom'];
 			$nom = $donnees['nom'];
 			$adresse = $donnees['adresse'];

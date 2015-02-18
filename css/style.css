@@ -50,12 +50,13 @@ a {text-decoration: none;}
 
 
 #one_page {
-	background-image: url(../src/img/avion_xl.jpg);
 	background-size: cover;
-	color:white;
 	padding:15px;
 	background-origin: 50% 50%;
 	background-position: 50% 50%;
+}
+#one_page h1 {
+
 }
 
 .section {
@@ -84,6 +85,19 @@ table.full td {
 	color:white;
 	background-color: #212121;
 	padding:5px 15px;
+	position:fixed;
+	top: 0;left: 0;right: 0;
+	z-index: 999;
+}
+.connect-links a {
+	color:white;
+	text-decoration: none;
+}
+.menu li + li {
+	border-left:1px solid white;
+}
+.menu li {
+	padding:0 15px;
 }
 
 .circuit-info {
@@ -101,4 +115,9 @@ table.full td {
 .circuit-btn:hover, .circuit-btn-actif {
 	background-color: #1abc9c;
 	color:white;
+}
+
+.footer {
+	padding:50px 20px;
+	border:1px solid black;
 }

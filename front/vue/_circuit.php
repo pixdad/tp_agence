@@ -17,7 +17,7 @@ while($donnees = $requete->fetch())
 			<div><b>Départ : </b><?=$donnees['villeDepart']?>, <?=$donnees['paysDepart']?> - <b>Arrivée : </b><?=$donnees['villeArrivee']?><br/>
 			<b>Durée : </b><?=$donnees['dureeCircuit']?> jours</div>
 			<table class="full ta-center bg-fond-sombre">
-				<tr>
+				<tr style="border-bottom:1px solid white">
 					<td>Date départ</td>
 					<td>Prix</td>
 					<td>Places restantes</td>
@@ -43,10 +43,9 @@ while($donnees = $requete->fetch())
 							<td><?=$program['nombrePersonnes']?></td>
 							<td>
 								<?php if($connecte) { ?>
-									<form action="reservation_scr.php">
-										<input type="hidden" name="clientID" value="<?=$id?>"><input type="hidden" name="programmationID" value="<?=$program['programmationID']?>">
-										<input type="number" min="1" max="<?=$place_restante?>" placeholder="Nombre">
-										<select name="mode" style="color:black"><optgroup label="Mode de paiement"></option><option value="Cheque"/>Chèque<option value="CB"/>CB</optgroup></select>
+									<form action="../script/reservation_scr.php">
+										<input type="hidden" name="clientID" value="<?=$id?>"><input type="hidden" name="pID" value="<?=$program['programmationID']?>">
+										<select name="mode" style="color:black" required><optgroup label="Mode de paiement"></option><option value="Cheque"/>Chèque<option value="CB"/>CB</optgroup></select>
 										<input type="submit" class="button-xs bg-second" value="Réserver">
 									</form>
 								<?php } else { ?>
@@ -64,4 +63,6 @@ while($donnees = $requete->fetch())
 ?>
 	</ul>
 	</div>
+
+<script>$(function(){$( "circuit-btn:first" ).trigger( "click" );});</script>
 

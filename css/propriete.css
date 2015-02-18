@@ -53,6 +53,7 @@ bg-second-2 :#c0392b;
 }
 .row > * {
 	font-size: 1rem;
+	line-height: 1.5rem;
 }
 .col {
 	display: inline-block;
@@ -71,6 +72,11 @@ bg-second-2 :#c0392b;
 	letter-spacing: 0.5em;
 	word-spacing: 0.5em;
 	text-shadow:2px 2px 2px black;
+}
+.fond-h0 {
+	background-image: url(../src/img/voyage-panorama.jpg);
+	padding: 1px;
+	color:white;
 }
 .info-titre {
 	display:block;
@@ -130,4 +136,7 @@ ul.style-none {
 	list-style-type: none;
 	padding:0;
 	margin:0;
+}
+ul.horizontal li {
+	display: inline-block;
 }

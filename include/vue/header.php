@@ -2,8 +2,19 @@
 <?php 
 if ($connecte) {
 ?>
-		<span class="col col-50 ta-left">Bienvenue <?=$nom?> <?=$prenom?>,</span>
-		<span class="col col-50 ta-right"><a class="button-xs bg-second" href="../script/login_scr.php?deconnect=true">Se déconnecter</a></span>
+		<span class="col col-50 ta-left">
+			<ul class="menu style-none horizontal">
+				<li><a href="accueil.php">Accueil</a></li>
+				<li><a href="accueil.php#actualite">Actualités</a></li>
+				<li><a href="accueil.php#circuit">Circuits</a></li>
+				<li><a href="accueil.php#contact">Contact</a></li>
+			</ul>
+		</span>
+		<span class="col col-50 ta-right">
+			<span style="margin-right:50px;">Bienvenue <?=$nom?> <?=$prenom?>,</span>
+			<a href="gestionMembre.php" class="button-xs bg-main">Mon compte</a>
+			<a class="button-xs bg-second" href="../script/login_scr.php?deconnect=true">Se déconnecter</a>
+		</span>
 		
 <?php
 }
