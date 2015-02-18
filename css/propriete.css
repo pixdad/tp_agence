@@ -57,6 +57,12 @@ bg-second-2 :#c0392b;
 	line-height: 25px;
 	font-size: 25px;
 }
+.button-sm {
+	padding:15px;
+	line-height: 15px;
+	font-size: 15px;
+}
+
 
 .marge-xl {
 	margin:150px;
