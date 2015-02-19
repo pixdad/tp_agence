@@ -21,7 +21,7 @@ if(!$connecte) {
 	<section class="section">
 		<h2>Espace membre : <?php echo "$nom $prenom" ?></h1>
 		<div class="para-large center">
-			<form action="../script/updateInfoCompte.php" method="post" onsubmit="return match('#pass', '#confirm-pass');">
+			<form action="../script/updateInfoCompte_scr.php" method="post" onsubmit="return match('#pass', '#confirm-pass');">
 				<fieldset>
 					<legend>Modifier mes informations</legend>
 					<table class="center">
@@ -58,6 +58,7 @@ if(!$connecte) {
 			<hr>
 			<fieldset>
 				<legend>Gérer mes réservations</legend>
+				<?php include '_mesReservations.php' ?>
 			</fieldset>
 		</div>
 	</section>
