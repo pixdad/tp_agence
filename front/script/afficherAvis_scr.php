@@ -59,11 +59,11 @@ if (isset($_GET['id']))
 		echo "\nEreur :\n";
 		print_r($req_2->errorInfo());
 	}
-	if ($donnees = $req_2->fetch())
+	if ($donnees_2 = $req_2->fetch())
 	{
 		?>
 		<div></div>
-		<div>Moyenne des notes : <?=$donnees[0]?></div>
+		<div>Moyenne des notes : <?=$donnees_2[0]?></div>
 		<?php
 	}
 }
