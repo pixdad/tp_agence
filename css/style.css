@@ -110,6 +110,11 @@ table {
 	padding: 20px;
 	border:1px solid #BCBCBC;
 }
+.circuit-detail {
+	max-width: 500px;
+	border: 1px solid #212121;
+	box-shadow: 5px 5px 5px #212121;
+}
 .circuit-btn {
 	padding:15px;
 	cursor:pointer;

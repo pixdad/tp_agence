@@ -6,7 +6,7 @@ if ($connecte) {
 			<ul class="menu style-none horizontal">
 				<li><a href="accueil.php">Accueil</a></li>
 				<li><a href="accueil.php#actualite">Actualités</a></li>
-				<li><a href="accueil.php#circuit">Circuits</a></li>
+				<li><a href="circuit.php">Circuits</a></li>
 				<li><a href="accueil.php#contact">Contact</a></li>
 			</ul>
 		</span>
