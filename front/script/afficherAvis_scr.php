@@ -35,7 +35,7 @@ while($donnees = $requete->fetch())
 
 <tr>
 	<td><?=$donnees['description']?></td>
-	<td><?=$donnees['prenom'] $donnees['nom']?></td>
+	<td><?=$donnees['prenom']?> <?=$donnees['nom']?></td>
 	<td><?=$donnees['note']?></td>
 	<td><?=$donnees['avis']?></td>
 </tr>
