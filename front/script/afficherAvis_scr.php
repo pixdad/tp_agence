@@ -46,9 +46,8 @@ while($donnees = $req->fetch())
 	<td><?=$donnees['note']?></td>
 	<td><?=$donnees['avis']?></td>
 </tr>
-}
-
 <?php
+}
 if (isset($_GET['id']))
 {
 	$circuitID = $_GET['id'];
