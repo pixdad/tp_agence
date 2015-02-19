@@ -1,7 +1,7 @@
 <?php 
 include '../../include/script/secur_front.php';
 
-$template_html = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Affichage des avis - Travel\'INT Agency</title><link rel="stylesheet" href="../../css/style.css"></head><body>';
+$template_html = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Affichage des avis - Travel\'INT Agency</title></head><body>';
 
 echo $template_html;
 $req = "";
@@ -9,25 +9,23 @@ $req = "";
 if (isset($_GET['id']))
 {
 	$circuitID = $_GET['id'];
-	$sql = 'SELECT description, note, avis, prenom, nom FROM AVIS A, CIRCUIT C1, CLIENT C2 WHERE A.circuitID = C1.circuitID AND A.clientID = C2.clientID AND A.circuitID = ?';
+	$sql = 'SELECT description, note, avis, prenom, nom FROM AVIS A, CIRCUIT C1, CLIENT C2 WHERE A.circuitID = C2.circuitID AND C1.clientID = C2.clientID AND circuitID = ?';
 	$req = $bdd->prepare($sql);
 	$req->execute(array($circuitID));
 	if (!$req){
 			echo "\nEreur :\n";
 			print_r($req->errorInfo());
-	}
-
+		}
 
 } else {
 
-	$sql = 'SELECT description, note, avis, prenom, nom FROM AVIS A, CIRCUIT C1, CLIENT C2 WHERE A.circuitID = C1.circuitID AND A.clientID = C2.clientID';
+	$sql = 'SELECT description, note, avis, prenom, nom FROM AVIS A, CIRCUIT C1, CLIENT C2 WHERE A.circuitID = C.circuitID AND C1.clientID = C2.clientID';
 	$req = $bdd->prepare($sql);
 	$req->execute();
 	if (!$req){
 			echo "\nEreur :\n";
 			print_r($req->errorInfo());
 		}
-
 }
 
 ?>
@@ -39,22 +37,34 @@ if (isset($_GET['id']))
 	<td>Avis :</td>
 </tr>
 <?php
-
 while($donnees = $req->fetch())
 {
 ?>
-
 <tr>
 	<td><?=$donnees['description']?></td>
 	<td><?=$donnees['prenom']?> <?=$donnees['nom']?></td>
 	<td><?=$donnees['note']?></td>
 	<td><?=$donnees['avis']?></td>
 </tr>
-
-<?php
 }
 
-echo("<a href='../vue/accueil.php'>Retour à l'accueil.</a>");
-
+<?php
+if (isset($_GET['id']))
+{
+	$circuitID = $_GET['id'];
+	$sql = 'SELECT AVG(note) FROM AVIS WHERE circuitID = ?';
+	$req = $bdd->prepare($sql);
+	$req->execute(array($circuitID));
+	if (!$req){
+		echo "\nEreur :\n";
+		print_r($req->errorInfo());
+	}
+	?>
+	<div></div>
+	<div>Moyenne des notes : <?=$donnees[0]?></div>
+	<?php
+}
+echo("<a href='#' onclick='window.close()'>Fermer la fennêtre.</a>");
 ?>
+
 </body></html>
