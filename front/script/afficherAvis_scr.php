@@ -22,14 +22,14 @@ if (isset($_GET['id']))
 ?>
 <table class="full ta-center">
 <tr>
-	<td>Circuit : :</td>
-	<td>Client : :</td>
+	<td>Circuit :</td>
+	<td>Client :</td>
 	<td>Note :</td>
 	<td>Avis :</td>
 </tr>
 <?php
 
-while($donnees = $requete->fetch())
+while($donnees = $req->fetch())
 {
 ?>
 
