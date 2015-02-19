@@ -66,7 +66,7 @@ if(!$connecte) {
 				<p class="para ta-center center">Attention ! Vous ne pouvez enregistrer qu'un seul avis par circuit. Si vous enregistrez un avis
 				sur un circuit déjà évalué, vous remplacerez votre ancien avis par ce nouveau.<br/>
 				Pour connaître les avis déjà distribués</p>
-				<form action="../script/enregistrerAvis_src" method="post">
+				<form action="../script/ajouter_avis_src.php" method="post">
 					<table class="full"><tr>
 					<td><label for="select-circuit">Choisir un circuit : </label>
 					<select name="circuitID" id="select-circuit"><option>
@@ -74,7 +74,9 @@ if(!$connecte) {
 						while($donnees=$req->fetch()) { echo "<option value='".$donnees['circuitID']."'>".$donnees['description'];} ?>
 					</select></td>
 					<td><label for="note">Evaluer : </label></td>
-					<?php for($i=0;$i<11;$i++) echo ' <td><input type="radio" name="note" value="'.$i.'" required>'.$i.'</td>'; ?></tr></table>
+					<?php for($i=0;$i<11;$i++) echo ' <td><input type="radio" name="note" value="'.$i.'" required>'.$i.'</td>'; ?></tr></table>				
+					<textarea name="avis" id="" cols="30" rows="10"></textarea>
+					<input type="hidden" name="clientID" value="<?=$id?>">
 				</form>
 			</fieldset>
 		</div>
