@@ -4,6 +4,7 @@ include '../../include/script/secur_front.php';
 $template_html = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Affichage des avis - Travel\'INT Agency</title></head><body>';
 
 echo $template_html;
+$req = "";
 
 if (isset($_GET['id']))
 {
