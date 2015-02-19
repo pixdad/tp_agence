@@ -12,7 +12,7 @@ if ($connecte) {
 		$note = $_POST['note'];
 		$avis = $_POST['avis'];
 
-		$sql_delete = 'DELETE FROM AVIS WHERE circuitID = ? AND clientID = ?'
+		$sql_delete = 'DELETE FROM AVIS WHERE circuitID = ? AND clientID = ?';
 		$sql_add = 'INSERT INTO AVIS(circuitID, clientID, note, avis) VALUES (?,?,?,?)';
 		$req = $bdd->prepare($sql_delete);
 		$req->execute(array($circuitID, $clientID));
