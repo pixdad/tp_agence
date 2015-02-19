@@ -52,17 +52,20 @@ echo "</table>";
 if (isset($_GET['id']))
 {
 	$circuitID = $_GET['id'];
-	$sql = 'SELECT AVG(note) FROM AVIS GROUP BY circuitID HAVING circuitID = ?';
-	$req = $bdd->prepare($sql);
-	$req->execute(array($circuitID));
-	if (!$req){
+	$sql_2 = 'SELECT AVG(note) FROM AVIS GROUP BY circuitID HAVING circuitID = ?';
+	$req_2 = $bdd->prepare($sql_2);
+	$req_2->execute(array($circuitID));
+	if (!$req_2){
 		echo "\nEreur :\n";
-		print_r($req->errorInfo());
+		print_r($req_2->errorInfo());
 	}
-	?>
-	<div></div>
-	<div>Moyenne des notes : <?=$donnees[0]?></div>
-	<?php
+	if ($donnees = $req_2->fetch())
+	{
+		?>
+		<div></div>
+		<div>Moyenne des notes : <?=$donnees[0]?></div>
+		<?php
+	}
 }
 echo("<a href='#' onclick='window.close()'>Fermer la fennêtre.</a>");
 ?>
