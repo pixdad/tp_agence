@@ -12,12 +12,22 @@ if (isset($_GET['id']))
 	$sql = 'SELECT description, note, avis, prenom, nom FROM AVIS A, CIRCUIT C1, CLIENT C2 WHERE A.circuitID = C.circuitID AND C1.clientID = C2.clientID AND circuitID = ?';
 	$req = $bdd->prepare($sql);
 	$req->execute(array($circuitID));
+	if (!$req){
+			echo "\nEreur :\n";
+			print_r($req->errorInfo());
+		}
+
 
 } else {
 
 	$sql = 'SELECT description, note, avis, prenom, nom FROM AVIS A, CIRCUIT C1, CLIENT C2 WHERE A.circuitID = C.circuitID AND C1.clientID = C2.clientID';
 	$req = $bdd->prepare($sql);
 	$req->execute();
+	if (!$req){
+			echo "\nEreur :\n";
+			print_r($req->errorInfo());
+		}
+
 }
 
 ?>
