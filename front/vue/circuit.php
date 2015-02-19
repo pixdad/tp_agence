@@ -21,7 +21,7 @@
 					
 					<div class="col col-50 padding">
 						<div class="center circuit-detail padding bg-fond">
-							<span class="info-titre"><?=$donnees['description']?> <a style="vertical-align:middle" class="button-sm bg-main" href="../script/afficherAvis_scr.php?id=<?=$donnees['circuitID']?>"  onclick="open(this.href(), 'Popup', 'scrollbars=1,resizable=1,height=560,width=770'); return false;">Avis</a></span>
+							<span class="info-titre"><?=$donnees['description']?> <a style="vertical-align:middle" class="button-sm bg-main" href="../script/afficherAvis_scr.php?id=<?=$donnees['circuitID']?>"  onclick="open(this.href, 'Popup', 'scrollbars=1,resizable=1,height=560,width=770'); return false;">Avis</a></span>
 							<div class="row">
 								<p class="col col-50 padding">
 									<b>Départ : </b><?=$donnees['villeDepart']?>, <?=$donnees['paysDepart']?><br/> <b>Arrivée : </b><?=$donnees['villeArrivee']?><br/>
