@@ -30,4 +30,5 @@ else {
 	}
 	else header('location: ../../front/vue/login.php?false=session');
 }
+$admin = true;
  ?>
