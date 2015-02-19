@@ -42,7 +42,6 @@ while($donnees = $requete->fetch())
 
 <?php
 }
-?>
 
 echo("<a href='../vue/accueil.php'>Retour à l'accueil.</a>");
 
