@@ -48,6 +48,7 @@ while($donnees = $req->fetch())
 </tr>
 <?php
 }
+echo "</table>";
 if (isset($_GET['id']))
 {
 	$circuitID = $_GET['id'];
