@@ -132,6 +132,9 @@ bg-second-2 :#c0392b;
 .marge-xl {
 	margin:150px;
 }
+.padding {
+	padding:15px;
+}
 
 ul.style-none {
 	list-style-type: none;

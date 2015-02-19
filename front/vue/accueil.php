@@ -33,7 +33,6 @@
 
 	<section id="circuit" class="section bg-fond-1">
 		<h2 class="wow fadeInUp">Circuits proposés <a style="vertical-align:top" href="circuit.php" class="button-xl bg-main">Détails</a></h2>
-		<p class="ta-center"></p>
 		<?php include '_circuit.php'; ?>
 	</section>
 
