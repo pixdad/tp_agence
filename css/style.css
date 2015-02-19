@@ -96,7 +96,7 @@ table {
 	color:white;
 	text-decoration: none;
 }
-.menu li + li {
+.menu > li + li {
 	border-left:1px solid white;
 }
 .menu li {
@@ -128,4 +128,18 @@ table {
 .footer {
 	padding:50px 20px;
 	border:1px solid black;
+}
+
+#link-admin {
+	position:relative;
+}
+.sub-links {
+	height: 0;
+	overflow:hidden;
+	position:absolute;
+	left: 0;right: 0;
+	transition:all 500ms ease;
+}
+#link-admin:hover .sub-links {
+	height:auto;
 }

@@ -1,4 +1,24 @@
 <nav class="connect-links row">
+<?php 
+if (isset($admin) && $admin) { ?>
+		<span class="col col-50 ta-left">
+			<ul class="menu style-none horizontal">
+				<li id="link-admin"><a href="../../back/vue/accueil.php"><span class='c-valeur'>Administrateur </span></a>
+					<ul class="sub-links style-none vertical bg-fond-sombre">
+						<li>test</li>
+						<li>test</li>
+						<li>test</li>
+						<li></li>
+					</ul>
+				</li>
+				<li><a href="../../front/vue/accueil.php">Voir le site</a></li>
+				<li><a href="../../front/vue/accueil.php#actualite">Actualités</a></li>
+				<li><a href="../../front/vue/circuit.php">Circuits</a></li>
+				<li><a href="../../front/vue/accueil.php#contact">Contact</a></li>
+			</ul>
+		</span>
+
+<?php } else { ?>
 		<span class="col col-50 ta-left">
 			<ul class="menu style-none horizontal">
 				<li><a href="accueil.php">Accueil</a></li>
@@ -6,14 +26,16 @@
 				<li><a href="circuit.php">Circuits</a></li>
 				<li><a href="accueil.php#contact">Contact</a></li>
 			</ul>
+		</span>
 <?php 
+}
+
 if ((isset($connecte) && $connecte) || (isset($admin) && $admin)) {
 ?>
-		</span>
 		<span class="col col-50 ta-right">
 			<span style="margin-right:50px;">Bienvenue <?=$nom?> <?=$prenom?>,</span>
-			<a href="gestionMembre.php" class="button-xs bg-main"><span>Administrateur - </span>Mon compte</a>
-			<a class="button-xs bg-second" href="../script/login_scr.php?deconnect=true">Se déconnecter</a>
+			<a href="gestionMembre.php" class="button-xs bg-main">Mon compte</a>
+			<a class="button-xs bg-second" href="../../front/script/login_scr.php?deconnect=true">Se déconnecter</a>
 		</span>
 		
 <?php

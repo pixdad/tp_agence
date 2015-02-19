@@ -22,15 +22,18 @@ else {
 	$requete->execute(array($login, $passwd));
 
 	if($donnees = $requete->fetch()) {
+		$id = $donnees['clientID'];
+		$prenom = $donnees['prenom'];
+		$nom = $donnees['nom'];
+		$adresse = $donnees['adresse'];
+		$passwd = ''; //On vide pour éviter de s'en servir dans le reste de la page (pour l'afficher, etc.)
 		if (!$donnees['admin']) {
-			$id = $donnees['clientID'];
-			$prenom = $donnees['prenom'];
-			$nom = $donnees['nom'];
-			$adresse = $donnees['adresse'];
-			$passwd = ''; //On vide pour éviter de s'en servir dans le reste de la page (pour l'afficher, etc.)
 			$connecte = true;
 		}
-		else $connecte = false;
+		else {
+			$connecte = false;
+			$admin = true;
+		}
 	}
 	else $connecte = false;
 }

@@ -9,10 +9,11 @@
 </head>
 <body>
 	<?php include "../../include/vue/header.php" ?>
-	<header id="one_page" class="fond-h0">
+	<header class="fond-h0">
 		<h1 class="h0 ta-center wow fadeInUp">Travel'INT<br/>Agency</h1>
-		<div class="ta-center marge-xl"><a href="#" class="button-xl uppercase thin bg-main  wow zoomIn" data-wow-delay="0.5s">Découvrez</a></div>
 	</header>
-	<h1>Back office</h1>
+	<section class="section">
+		<h2>Espace Administrateur</h2>
+	</section>
 </body>
 </html>

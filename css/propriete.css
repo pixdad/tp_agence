@@ -148,3 +148,6 @@ ul.style-none {
 ul.horizontal li {
 	display: inline-block;
 }
+ul.vertical li {
+	display: list-item;
+}
