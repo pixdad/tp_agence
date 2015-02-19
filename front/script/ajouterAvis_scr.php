@@ -5,7 +5,7 @@ $template_html = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><ti
 
 if ($connecte) {
 	echo $template_html;
-	if(isset($_POST['circuitID']) && isset($_POST['note']) && isset($_POST['clientID']
+	if(isset($_POST['circuitID']) && isset($_POST['note']) && isset($_POST['clientID'])
 		&& isset($_POST['avis'])) {
 		$clientID = $_POST['clientID'];
 		$circuitID = $_POST['circuitID'];
