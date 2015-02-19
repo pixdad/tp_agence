@@ -60,6 +60,23 @@ if(!$connecte) {
 				<legend>Gérer mes réservations</legend>
 				<?php include '_mesReservations.php' ?>
 			</fieldset>
+			<hr>
+			<fieldset>
+				<legend>Enregistrer un avis</legend>
+				<p class="para ta-center center">Attention ! Vous ne pouvez enregistrer qu'un seul avis par circuit. Si vous enregistrez un avis
+				sur un circuit déjà évalué, vous remplacerez votre ancien avis par ce nouveau.<br/>
+				Pour connaître les avis déjà distribués</p>
+				<form action="../script/enregistrerAvis_src" method="post">
+					<table class="full"><tr>
+					<td><label for="select-circuit">Choisir un circuit : </label>
+					<select name="circuitID" id="select-circuit"><option>
+						<?php $req = $bdd->query('SELECT circuitID, description FROM CIRCUIT');
+						while($donnees=$req->fetch()) { echo "<option value='".$donnees['circuitID']."'>".$donnees['description'];} ?>
+					</select></td>
+					<td><label for="note">Evaluer : </label></td>
+					<?php for($i=0;$i<11;$i++) echo ' <td><input type="radio" name="note" value="'.$i.'" required>'.$i.'</td>'; ?></tr></table>
+				</form>
+			</fieldset>
 		</div>
 	</section>
 	<?php include '../../include/vue/footer.php' ?>
