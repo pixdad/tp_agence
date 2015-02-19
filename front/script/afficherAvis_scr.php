@@ -52,7 +52,7 @@ while($donnees = $req->fetch())
 if (isset($_GET['id']))
 {
 	$circuitID = $_GET['id'];
-	$sql = 'SELECT AVG(note) FROM AVIS WHERE circuitID = ?';
+	$sql = 'SELECT AVG(note) FROM AVIS GROUP BY circuitID HAVING circuitID = ?';
 	$req = $bdd->prepare($sql);
 	$req->execute(array($circuitID));
 	if (!$req){
