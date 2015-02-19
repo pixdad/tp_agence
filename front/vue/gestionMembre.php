@@ -77,6 +77,7 @@ if(!$connecte) {
 					<?php for($i=0;$i<11;$i++) echo ' <td><input type="radio" name="note" value="'.$i.'" required>'.$i.'</td>'; ?></tr></table>				
 					<textarea name="avis" id="" cols="30" rows="10"></textarea>
 					<input type="hidden" name="clientID" value="<?=$id?>">
+					<div class="ta-center"><input type="submit" class="button-sm bg-second" value="Enregistrer votre avis"></div>
 				</form>
 			</fieldset>
 		</div>
