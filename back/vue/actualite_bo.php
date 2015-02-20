@@ -36,7 +36,7 @@
 					<tr>
 						<td><?=$donnees['id']?></td>
 						<td><?=$donnees['titre']?></td>
-						<td><?=$donnees['date']?></td>
+						<td><?=$donnees['dateActualite']?></td>
 						<td>
 							<a class="button-xs bg-main" 
 							onclick="$('.lig-modif').hide();$(this).parent().parent().next('.lig-modif').show(); ">Modifier</a>

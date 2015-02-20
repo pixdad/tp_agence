@@ -118,9 +118,10 @@
 						</tr>
 						<tr>
 							<td>Durée du circuit : </td>
-							<td><input type="text" name="dureeCircuit" required></td>
+							<td><input type="number" name="dureeCircuit" min="0" required></td>
 						</tr>
 					</table>
+					<div class="ta-center"><input type="submit" class="button-sm bg-main" value="Ajouter"></div>
 				</form>
 			</div>
 	</section>
