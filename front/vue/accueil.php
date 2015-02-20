@@ -22,8 +22,8 @@
 	<section id="actualite" class="section bg-fond-2">
 		<h2 class="wow fadeInUp">Actualités</h2>
 		<ul class="list-x wow zoomIn">
-			<?php /*$req = $bdd->query('SELECT * FROM ACTUALITE ORDER BY dateActualite, id DESC'); 
-			while($d = $req->fetch()) { ?>
+			<?php $req = $bdd->query('SELECT * FROM ACTUALITE ORDER BY dateActualite, id DESC'); 
+			/*while($d = $req->fetch()) { ?>
 				<li class="list-item">
 					<header class="titre"><?=$d['titre']?></header>
 					<span class="date"><?=$d['dateActualite']?></span>
