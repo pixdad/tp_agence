@@ -36,7 +36,7 @@
 					<tr>
 						<td><?=$donnees['circuitID']?> - <?=$donnees['description']?></td>
 						<td><?=$donnees['note']?></td>
-						<td><?=$donnees['avis']?></td>
+						<td style="max-width:500px;"><?=$donnees['avis']?></td>
 						<td><?=$donnees['login']?></td>
 						<td>
 							<form method="post" action="../script/supprimerAvis_scr.php">
