@@ -57,4 +57,4 @@ if (isset($_POST['action']))
 }
 
 # Redirection ...
-#header('location:../vue/actualite_bo.php');
+header('location:../vue/actualite_bo.php');
