@@ -59,11 +59,12 @@
 							<p>Infos générales</p>
 							<form method="post" action="../script/ajouterModifierSupprimerCircuit_scr.php">
 								<input type="hidden" name="action" value="modifier">
-								<input type="text" name="description" placeholder="Description" >
-								<input type="text" name="villeDepart" placeholder="Ville de départ" >
-								<input type="text" name="paysDepart" placeholder="Pays de départ" >
-								<input type="text" name="villeArrivee" placeholder="Ville d'arrivée" >
-								<input type="text" name="dureeCircuit" placeholder="durée du circuit" >
+								<input type="hidden" name="circuitID" value="<?=$donnees['circuitID']?>">
+								<input type="text" name="description" value="<?=$donnees['description']?>" placeholder="Description" >
+								<input type="text" name="villeDepart" value="<?=$donnees['villeDepart']?>" placeholder="Ville de départ" >
+								<input type="text" name="paysDepart" value="<?=$donnees['paysDepart']?>" placeholder="Pays de départ" >
+								<input type="text" name="villeArrivee" value="<?=$donnees['villeArrivee']?>" placeholder="Ville d'arrivée" >
+								<input type="text" name="dureeCircuit" value="<?=$donnees['dureeCircuit']?>" placeholder="durée du circuit" >
 								<input class="button-xs bg-main" type="submit" value="Modifier">
 							</form>
 							<p>Remplacer toute les étapes</p>
