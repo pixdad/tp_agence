@@ -39,7 +39,7 @@
 				<li><b style="font-size:1em;line-height:2em;">Moyenne par circuit :</b>
 					<ul style="font-size:1em;line-height:1.5em;">
 						<?php $req = $bdd->query('SELECT *, AVG(note) FROM AVIS A, CIRCUIT C WHERE A.circuitID = C.circuitID GROUP BY A.circuitID ORDER BY AVG(note) DESC');
-						while($d = $req->fetch()) {echo '<b>'.$d['circuitID'].' - '.$d['description'].' : </b>'.$d['AVG(note)'];  } ?>
+						while($d = $req->fetch()) {echo '<li><b>'.$d['circuitID'].' - '.$d['description'].' : </b>'.$d['AVG(note)'].'</li>';  } ?>
 					</ul>
 				</li>
 			</ul>
