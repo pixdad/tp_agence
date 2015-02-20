@@ -21,5 +21,29 @@
 			<div class="col col-25 ta-center" style="vertical-align:middle;"><a href="avis_bo.php" class="ico-link c-valeur button-xl"><img src="../../src/img/avis-xl.png" alt=""><br>Modérer les avis</a></div>
 		</div>
 	</section>
+
+	<section class="section">
+		<h2>Statistiques</h2>
+		<article class="para center">
+			<ul class="style-none" style="font-size:1.5em;line-height:2em;">
+				<li><b style="font-size:1em;line-height:2em;">Nombre d'actualités : </b>
+				<?php $req = $bdd->query('SELECT count(*) FROM ACTUALITE');
+				if($d = $req->fetch()) {echo $d['count(*)']; } ?></li>
+				<li><b style="font-size:1em;line-height:2em;">Nombre d'avis des utilisateurs : </b>
+				<?php $req = $bdd->query('SELECT count(*) FROM AVIS');
+				if($d = $req->fetch()) {echo $d['count(*)'];  } ?></li>
+				<li><b style="font-size:1em;line-height:2em;">Moyenne des notes données : </b>
+				<?php $req = $bdd->query('SELECT AVG(note) FROM AVIS');
+				if($d = $req->fetch()) {echo $d['AVG(note)'];  } ?></li>
+				<li><b style="font-size:1em;line-height:2em;">Moyenne par circuit :</b>
+					<ul style="font-size:1em;line-height:1.5em;">
+						<?php $req = $bdd->query('SELECT *, AVG(note) FROM AVIS A, CIRCUIT C WHERE A.circuitID = C.circuitID GROUP BY A.circuitID ORDER BY AVG(note) DESC');
+						while($d = $req->fetch()) {echo '<b>'.$d['circuitID'].' - '.$d['description'].' : </b>'.$d['AVG(note)'];  } ?>
+					</ul>
+				</li>
+			</ul>
+		</article>
+
+	</section>
 </body>
 </html>

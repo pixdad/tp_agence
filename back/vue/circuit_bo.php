@@ -14,6 +14,7 @@
 	</header>
 	<section class="section">
 		<h2>Gérer les circuits</h2>
+			<h3>Modifier des circuits</h3>
 			<table class="full ta-center bg-fond-sombre">
 				<tr style="border-bottom:1px solid white">
 					<td>Description</td>
@@ -43,20 +44,20 @@
 						<td><?=$donnees['dureeCircuit']?></td>
 						<td>
 							<a class="button-xs bg-main" 
-							onclick="$('.lig-modif-circuit').hide();$(this).parent().parent().next('.lig-modif-circuit').show(); ">Modifier</a>
+							onclick="$('.lig-modif').hide();$(this).parent().parent().next('.lig-modif').show(); ">Modifier</a>
 						</td>
 						<td>
-							<form method="post" action="../script/modifierSupprimerCircuit_scr.php">
+							<form method="post" action="../script/ajouterModifierSupprimerCircuit_scr.php">
 								<input type="hidden" name="action" value="supprimer">
 								<input type="hidden" name="circuitID" value="<?=$donnees['circuitID']?>">
 								<input class="button-xs bg-second" type="submit" value="Supprimer">
 							</form>
 						</td>
 					</tr>
-					<tr class="lig-modif-circuit bg-fond-2">
+					<tr class="lig-modif bg-fond-2">
 						<td colspan="7">
 							<p>Infos générales</p>
-							<form method="post" action="../script/modifierSupprimerCircuit_scr.php">
+							<form method="post" action="../script/ajouterModifierSupprimerCircuit_scr.php">
 								<input type="hidden" name="action" value="modifier">
 								<input type="text" name="description" placeholder="Description" >
 								<input type="text" name="villeDepart" placeholder="Ville de départ" >
@@ -76,7 +77,7 @@
 									} ?>
 								</div>
 								<div class="col col-25">
-									<form method="post" action="../script/modifierSupprimerCircuit_scr.php">
+									<form method="post" action="../script/ajouterModifierSupprimerCircuit_scr.php">
 										<input type="hidden" name="action" value="modifierEtape">
 										<input type="hidden" name="circuitID" value="<?=$donnees['circuitID']?>">
 										<input type="text" name="etape[]" placeholder="Ville étape"> <input type="number" min="1" placeholder="nombre de jours"><br>
@@ -92,6 +93,35 @@
 
 					<?php } ?>
 			</table>
+
+			<h3>Créer un circuit</h3>
+			<div class="para center">
+				<form action="../script/ajouterModifierSupprimerCircuit_scr.php" method="post">
+					<input type="hidden" name="action" value="ajouter">
+					<table class="full">
+						<tr>
+							<td>Description : </td>
+							<td><input type="text" name="description" required></td>
+						</tr>
+						<tr>
+							<td>Pays de départ : </td>
+							<td><input type="text" name="paysDepart" required></td>
+						</tr>
+						<tr>
+							<td>Ville de départ : </td>
+							<td><input type="text" name="villeDepart" required></td>
+						</tr>
+						<tr>
+							<td>Ville d'arrivée : </td>
+							<td><input type="text" name="villeArrivee" required></td>
+						</tr>
+						<tr>
+							<td>Durée du circuit : </td>
+							<td><input type="text" name="dureeCircuit" required></td>
+						</tr>
+					</table>
+				</form>
+			</div>
 	</section>
 </body>
 </html>

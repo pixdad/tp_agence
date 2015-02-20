@@ -43,8 +43,11 @@ html, body {
 h1, h2, h3 {
 	text-transform: uppercase;
 	text-align: center;
-	font-size: 4em;
 }
+h1 {font-size: 4em;}
+h2 {font-size: 4em;}
+h3 {font-size: 3em;}
+
 
 a {text-decoration: none;}
 
@@ -69,6 +72,23 @@ a {text-decoration: none;}
 ul.list-x {
 	list-style-type:none;
 	margin:auto;
+	white-space: nowrap;
+	overflow-x:scroll;
+}
+.list-item {
+	display: inline-block;
+	width:600px;
+	height: 100%;
+	margin:10px 20px;
+	padding:20px;
+	padding-top: 0;
+	vertical-align: top;
+	border:2px solid #212121;
+	white-space: pre-wrap;
+	line-height: 160%;
+}
+.list-item .titre {
+	font-size: 2.5em;
 }
 
 table.full {
@@ -156,6 +176,6 @@ table {
 	transition:all 500ms ease;
 }
 
-.lig-modif-circuit {
+.lig-modif {
 	display: none;
 }

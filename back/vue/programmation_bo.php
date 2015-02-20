@@ -4,7 +4,7 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
-	<title>Back-Office : Circuits - Travel'INT Agency</title>
+	<title>Back-Office : Programmation - Travel'INT Agency</title>
 	<?php include '../../include/vue/head.php'; ?>
 </head>
 <body>
@@ -47,14 +47,17 @@
 						<td>
 							<form method="post" action="../script/ajouterSupprimerProg_scr.php" onsubmit="return confirm('Etes vous sûr de vouloir supprimer cette programmation ?');">
 								<input type="hidden" name="pID" value="<?=$d['programmationID']?>">
+								<input type="hidden" name="action" value="supprimer">
 								<input class="button-xs bg-main" type="submit" value="Supprimer">
 							</form>
 						</td>
 					</tr>
 					<?php } ?>
 		</table>
+		
 		<h3>Créer une programmation</h3>
 		<form action="../script/ajouterSupprimerProg_scr.php" method="post">
+			<input type="hidden" name="action" value="ajouter">
 			<div class="para center">
 				<table class="full">
 					<tr>

@@ -21,13 +21,15 @@
 	</section>
 	<section id="actualite" class="section bg-fond-2">
 		<h2 class="wow fadeInUp">Actualités</h2>
-		<ul class="list-x para-large wow zoomIn">
-			<li class="list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quod aut voluptas magni praesentium tenetur corrupti facilis doloremque cum, laudantium earum quaerat autem et totam quia dicta magnam fugiat dolore.</li>
-			<li class="list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perferendis magni quae maiores consequuntur, sequi ipsa debitis doloremque laudantium iure quisquam tempora quo velit iste molestias necessitatibus fuga, qui provident.</li>
-			<li class="list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptate dolores animi quisquam accusamus quo? Perspiciatis deleniti dolores, exercitationem doloremque. Similique quisquam soluta minus, incidunt necessitatibus cupiditate atque minima doloremque!</li>
-			<li class="list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae doloribus molestiae vero, ipsam sequi ratione alias, provident expedita quibusdam facilis consequatur velit a voluptatibus corrupti, explicabo sapiente asperiores necessitatibus in!</li>
-			<li class="list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quae incidunt, hic dignissimos cumque, enim doloribus sequi accusamus quis voluptatibus libero beatae magni, ipsa in, quos eos. Illum, necessitatibus, nemo!</li>
-			<li class="list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi placeat est maiores officia ab cupiditate dolorum earum unde, adipisci sapiente aliquid beatae sed temporibus vero hic incidunt quaerat quisquam magni.</li>
+		<ul class="list-x wow zoomIn">
+			<?php $req = $bdd->query('SELECT * FROM ACTUALITE ORDER BY dateActualite, id DESC'); 
+			while($d = $req->fetch()) { ?>
+				<li class="list-item">
+					<header class="titre"><?=$d['titre']?></header>
+					<span class="date"><?=$d['dateActualite']?></span>
+					<article><?=$d['texte']?></article>
+				</li>
+			<?php } ?>
 		</ul>
 	</section>
 

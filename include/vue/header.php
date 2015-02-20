@@ -5,10 +5,10 @@ if (isset($admin) && $admin) { ?>
 			<ul class="menu style-none horizontal">
 				<li id="link-admin"><a href="../../back/vue/accueil.php"><span class='c-valeur'>Administrateur </span></a>
 					<ul class="sub-links style-none vertical bg-fond-sombre">
-						<li>test</li>
-						<li>test</li>
-						<li>test</li>
-						<li></li>
+						<li><a href="../../back/vue/circuit_bo.php">Circuits</a></li>
+						<li><a href="../../back/vue/programmation_bo.php">Programmations</a></li>
+						<li><a href="../../back/vue/actualite_bo.php">Actualité</a></li>
+						<li><a href="../../back/vue/avis_bo.php">Avis</a></li>
 					</ul>
 				</li>
 				<li><a href="../../front/vue/accueil.php">Voir le site</a></li>
@@ -47,6 +47,7 @@ else {
 				<input type="text" name="login"	placeholder="login">
 				<input type="password" name="passwd" placeholder="mot de passe">
 				<input class="bg-second" type="submit" value="Se connecter">
+				<a href="subscribe.php" style="border-left:1px solid white;padding:0 15px;margin:0 15px;">S'inscrire</a>
 			</form>
 		</span>
 <?php
