@@ -14,6 +14,12 @@
 	</header>
 	<section class="section">
 		<h2>Espace Administrateur</h2>
+		<div class="row para-large center">
+			<div class="col col-25 ta-center" style="vertical-align:middle;"><a href="circuit_bo.php" class="ico-link c-valeur button-xl"><img src="../../src/img/circuit-xl.png" alt=""><br>Gérer les circuits</a></div>
+			<div class="col col-25 ta-center" style="vertical-align:middle;"><a href="programmation_bo.php" class="ico-link c-valeur button-xl"><img src="../../src/img/programmation-xl.png" alt=""><br>Gérer les programmation</a></div>
+			<div class="col col-25 ta-center" style="vertical-align:middle;"><a href="actualite_bo.php" class="ico-link c-valeur button-xl"><img src="../../src/img/actualite-xl.png" alt=""><br>Gérer les actualités</a></div>
+			<div class="col col-25 ta-center" style="vertical-align:middle;"><a href="avis_bo.php" class="ico-link c-valeur button-xl"><img src="../../src/img/avis-xl.png" alt=""><br>Modérer les avis</a></div>
+		</div>
 	</section>
 </body>
 </html>

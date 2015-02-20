@@ -17,8 +17,8 @@
 @font-face {
     font-family: 'Quattrocento';
     font-style:italic;
-    font-weight: bold
-    src: url('../src/polices/QuattrocentoSans-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    src: url('../src/polices/QuattrocentoSans-BoldItalic.ttf') format('truetype')
 }
 @font-face {
 	font-family: 'Jaapo';
@@ -142,4 +142,20 @@ table {
 }
 #link-admin:hover .sub-links {
 	height:auto;
+}
+
+.ico-link img{
+	transition:all 500ms ease;
+	transition-duration:0s;
+	margin-bottom:15px;
+	width:50%;
+}
+.ico-link:hover img {
+	-webkit-transform:rotateZ(360deg);
+	   -moz-transform:rotateZ(360deg);
+	transition:all 500ms ease;
+}
+
+.lig-modif-circuit {
+	display: none;
 }
