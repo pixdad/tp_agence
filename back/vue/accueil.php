@@ -26,7 +26,7 @@
 	<section class="section">
 		<h2>Statistiques</h2>
 		<article class="para center">
-			<ul class="style-none" style="font-size:1.5em;line-height:2em;">
+			<ul style="list-style-type:none;" style="font-size:1.5em;line-height:2em;">
 				<li><b style="font-size:1em;line-height:2em;">Nombre d'actualités : </b>
 				<?php $req = $bdd->query('SELECT count(*) FROM ACTUALITE');
 				if($d = $req->fetch()) {echo $d['count(*)']; } ?></li>
