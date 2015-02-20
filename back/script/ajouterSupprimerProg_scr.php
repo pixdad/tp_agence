@@ -7,7 +7,7 @@ if (isset($_POST['action']))
 		case 'supprimer':
 			{
 				$pID = $_POST['pID'];
-				$sql = 'DELETE FROM CIRCUITPROGRAMME WHERE circuitID = ?';
+				$sql = 'DELETE FROM CIRCUITPROGRAMME WHERE programmationID = ?';
 				$req = $bdd->prepare($sql);
 				$req->execute(array($pID));
 				if (!$req)
