@@ -46,7 +46,6 @@ if (isset($_POST['action'])) {
 				$supprimer->execute(array($_POST['circuitID']));
 
 				for($i=0;$i<count($etape);$i++) {
-					echo $etape[$i];
 					$req = $bdd->prepare('INSERT INTO ETAPE(circuitID, numeroEtape, villeEtape, nombreJours) VALUES(?,?,?,?)');
 					$req->execute(array( $_POST['circuitID'], $i+1, $etape[$i], $jour[$i]));
 					if (!$req){
