@@ -10,5 +10,9 @@ if (isset($_POST['login'])) {
 	else header('location:../vue/user_bo.php');
 }
 else header('location:../vue/user_bo.php');
+<<<<<<< HEAD
 
 ?>
+=======
+?>
+>>>>>>> 42a97da896597745eab97c2cee8b9cbc142f7daa
