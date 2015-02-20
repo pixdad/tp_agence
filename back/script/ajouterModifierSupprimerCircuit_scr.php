@@ -46,20 +46,13 @@ if (isset($_POST['action'])) {
 				$supprimer->execute(array($_POST['circuitID']));
 
 				for($i=0;$i<count($etape);$i++) {
-					$req = $bdd->prepare('INSERT INTO ETAPE(numeroEtape, villeEtape, nombreJours) WHERE circuitID = ?');
-					$req->execute(array($i, $etape[$i], $jour[$i], $_POST['circuitID']));
+					echo $etape[$i];
+					$req = $bdd->prepare('INSERT INTO ETAPE(circuitID, numeroEtape, villeEtape, nombreJours) VALUES(?,?,?,?)');
+					$req->execute(array( $_POST['circuitID'], $i+1, $etape[$i], $jour[$i]));
 					if (!$req){
 						echo "\nEreur : \n";
 						print_r($req->errorInfo());
 					}
-				}
-
-
-				$req = $bdd->prepare('UPDATE CIRCUIT SET description=?, villeDepart=?, paysDepart=?, villeArrivee=?, dureeCircuit=? WHERE circuitID = ?');
-				$req->execute(array($_POST['description'], $_POST['villeDepart'], $_POST['paysDepart'], $_POST['villeArrivee'], $_POST['dureeCircuit'], $_POST['circuitID']));
-				if (!$req){
-						echo "\nEreur : \n";
-						print_r($req->errorInfo());
 				}
 			}
 		break;
