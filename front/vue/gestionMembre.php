@@ -21,7 +21,7 @@ if(!$connecte) {
 	<section class="section">
 		<h2>Espace membre : <?php echo "$nom $prenom" ?></h1>
 		<div class="para-large center">
-			<form action="../script/updateInfoCompte_scr.php" method="post" onsubmit="return match('#pass', '#confirm-pass');">
+			<form class="form" action="../script/updateInfoCompte_scr.php" method="post" onsubmit="return match('#pass', '#confirm-pass');">
 				<fieldset>
 					<legend>Modifier mes informations</legend>
 					<table class="center">

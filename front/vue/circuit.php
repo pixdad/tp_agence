@@ -53,6 +53,6 @@
 		<?php include '_circuit.php'; ?>
 	</section>
 	
-
+	<?php include '../../include/vue/footer.php' ?>
 </body>
 </html>

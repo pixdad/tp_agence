@@ -4,6 +4,8 @@
  * => ?false=id : erreur de login
  * => ?flase=session : tentative d'accès à une page interdite
 \* ========================================================================== */
+include '../../include/script/secur_front.php';
+
 $message="vide";
 $response = true;
 if (isset($_GET['false'])) {
@@ -31,6 +33,7 @@ if (isset($_GET['false'])) {
 </head>
 
 <body>
+	<?php include '../../include/vue/header.php'; ?>
 	<div id="contenu">
 		<?php if(!$response) {?><div class="banner alert"><?=$message?></div><?php } ?>
 		<header class="fond-h0">
@@ -38,15 +41,16 @@ if (isset($_GET['false'])) {
 	</header>
 		<section class="section">
 			<h2>Connexion</h2>
-			<form action="../script/login_scr.php" method="post">
-				<fieldset class="">
+			<form action="../script/login_scr.php" method="post" class="form">
+				<fieldset class="para center ta-center">
 					<legend>Identifiants</legend>
 					<input type="text" name="login"	placeholder="Saisissez votre login ...">
 					<input type="password" name="passwd" placeholder="Votre mot de passe ...">
-					<input type="submit" value="Se connecter">
+					<input class="button-xs bg-main" type="submit" value="Se connecter">
 				</fieldset>
 			</form>
 		</section>
 	</div>
+	<?php include '../../include/vue/footer.php' ?>
 </body>
 </html>
