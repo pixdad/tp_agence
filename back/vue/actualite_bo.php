@@ -53,6 +53,7 @@
 						<td colspan="7">
 							<form method="post" action="../script/ajouterModifierSupprimerActualite_scr.php">
 								<input type="hidden" name="action" value="modifier">
+								<input type="hidden" name="actuID" value="<?=$donnees['id']?>">
 								<input type="text" name="titre" placeholder="Titre" value="<?=$donnees['titre']?>">
 								<textarea name="texte" cols="30" rows="10"><?=$donnees['texte']?></textarea>
 								<input class="button-xs bg-main" type="submit" value="Modifier">
