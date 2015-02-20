@@ -40,7 +40,6 @@
 						<td><?=$donnees['login']?></td>
 						<td>
 							<form method="post" action="../script/supprimerUser_scr.php">
-								<input type="hidden" name="action" value="supprimer">
 								<input type="hidden" name="login" value="<?=$donnees['login']?>">
 								<input class="button-xs bg-second" type="submit" value="Supprimer">
 							</form>
