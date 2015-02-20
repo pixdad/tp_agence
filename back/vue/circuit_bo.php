@@ -81,7 +81,7 @@
 									<form method="post" action="../script/ajouterModifierSupprimerCircuit_scr.php">
 										<input type="hidden" name="action" value="modifierEtape">
 										<input type="hidden" name="circuitID" value="<?=$donnees['circuitID']?>">
-										<input type="text" name="etape[]" placeholder="Ville étape"> <input type="number" min="1" placeholder="nombre de jours"><br>
+										<input type="text" name="etape[]" placeholder="Ville étape" required> <input type="number" name="nbJour[]" min="1" placeholder="nombre de jours" required><br>
 										<img src="../../src/img/plus.png" height="64" width="64" alt="" 
 										onclick="$(this).before('<input type=\'text\' name=\'etape[]\' placeholder=\'Ville étape\'><input type=\'number\' min=\'1\' placeholder=\'nombre de jours\'><img src=\'../../src/img/moins.png\' onclick=\'$(this).prev().prev().remove();$(this).prev().remove();$(this).next().remove();$(this).remove();\'/><br>');" />
 										<br>
