@@ -69,7 +69,7 @@
 					<table class="center">
 						<tr>
 							<td>Titre : </td>
-							<td><input type="text" name="description" required></td>
+							<td><input type="text" name="titre" required></td>
 						</tr>
 						<tr>
 							<td>Texte : </td>
