@@ -11,7 +11,7 @@
 	<?php include '../../include/vue/header.php'; ?>
 	<header id="one_page" class="fond-h0">
 		<h1 class="h0 ta-center wow fadeInUp">Travel'INT<br/>Agency</h1>
-		<div class="ta-center marge-xl"><a href="#" class="button-xl uppercase thin bg-main  wow zoomIn" data-wow-delay="0.5s">Découvrez</a></div>
+		<div class="ta-center marge-xl"><a href="circuit.php" class="button-xl uppercase thin bg-main  wow zoomIn" data-wow-delay="0.5s">Découvrez</a></div>
 	</header>
 	<section class="section bg-fond-1">
 		<h2 class="wow fadeInUp">Notre objectif</h2>
@@ -25,8 +25,7 @@
 			<?php $req = $bdd->query('SELECT * FROM ACTUALITE ORDER BY dateActualite, id DESC'); 
 			while($d = $req->fetch()) { ?>
 				<li class="list-item">
-					<header class="titre"><?=$d['titre']?></header>
-					<span class="date"><?=$d['dateActualite']?></span>
+					<header class="titre"><?=$d['titre']?><br><span class="date"><?=$d['dateActualite']?></span></header>
 					<article><?=$d['texte']?></article>
 				</li>
 			<?php } ?>

@@ -1,8 +1,8 @@
 <?php include '../../include/script/secur_back.php';
 
-if (isset($_POST['login'])) {
-	$req = $bdd->prepare('DELETE FROM CLIENT WHERE login = ?');
-	$req->execute(array($_POST['login']));
+if (isset($_POST['clientID'])) {
+	$req = $bdd->prepare('DELETE FROM CLIENT WHERE clientID = ?');
+	$req->execute(array($_POST['clientID']));
 	if (!$req){
 			echo "\nEreur : \n";
 			print_r($req->errorInfo());

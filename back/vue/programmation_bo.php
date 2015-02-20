@@ -13,7 +13,7 @@
 		<h1 class="h0 ta-center wow fadeInUp">Travel'INT<br/>Agency</h1>
 	</header>
 	<section class="section">
-		<h2>Gérer les programmation de circuit</h2>
+		<h2>Gérer les programmations de circuit</h2>
 		<h3>Supprimer une programmation</h3>
 		<table class="full bg-fond-sombre">
 			<tr style="border-bottom:1px solid white">
@@ -30,10 +30,10 @@
 
 					$sql = 'SELECT * FROM CIRCUIT C, CIRCUITPROGRAMME P WHERE C.circuitID = P.circuitID ORDER BY dateDepart DESC';
 					$req = $bdd->query($sql);
-					/*if (!$req){
+					if (!$req){
 						echo "\nEreur :\n";
 						print_r($req->errorInfo());
-					}*/
+					}
 					while($d = $req->fetch()) { ?>
 
 					<tr>
@@ -48,7 +48,7 @@
 							<form method="post" action="../script/ajouterSupprimerProg_scr.php" onsubmit="return confirm('Etes vous sûr de vouloir supprimer cette programmation ?');">
 								<input type="hidden" name="pID" value="<?=$d['programmationID']?>">
 								<input type="hidden" name="action" value="supprimer">
-								<input class="button-xs bg-main" type="submit" value="Supprimer">
+								<input class="button-xs bg-second" type="submit" value="Supprimer">
 							</form>
 						</td>
 					</tr>

@@ -89,6 +89,12 @@ ul.list-x {
 }
 .list-item .titre {
 	font-size: 2.5em;
+	line-height: 1em;
+}
+.list-item .date {
+	color:#64646F;
+	font-style: italic;
+	font-size: 1.7rem;
 }
 
 table.full {

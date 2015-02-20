@@ -9,6 +9,7 @@ if (isset($admin) && $admin) { ?>
 						<li><a href="../../back/vue/programmation_bo.php">Programmations</a></li>
 						<li><a href="../../back/vue/actualite_bo.php">Actualité</a></li>
 						<li><a href="../../back/vue/avis_bo.php">Avis</a></li>
+						<li><a href="../../back/vue/user_bo.php">Utilisateurs</a></li>
 					</ul>
 				</li>
 				<li><a href="../../front/vue/accueil.php">Voir le site</a></li>
@@ -34,7 +35,7 @@ if ((isset($connecte) && $connecte) || (isset($admin) && $admin)) {
 ?>
 		<span class="col col-50 ta-right">
 			<span style="margin-right:50px;">Bienvenue <?=$nom?> <?=$prenom?>,</span>
-			<a href="gestionMembre.php" class="button-xs bg-main">Mon compte</a>
+			<?php if(isset($connecte) && $connecte) { ?><a href="gestionMembre.php" class="button-xs bg-main">Mon compte</a><?php } ?>
 			<a class="button-xs bg-second" href="../../front/script/login_scr.php?deconnect=true">Se déconnecter</a>
 		</span>
 		

@@ -35,10 +35,10 @@ if (isset($_GET['false'])) {
 <body>
 	<?php include '../../include/vue/header.php'; ?>
 	<div id="contenu">
-		<?php if(!$response) {?><div class="banner alert"><?=$message?></div><?php } ?>
 		<header class="fond-h0">
 		<h1 class="h0 ta-center wow fadeInUp">Travel'INT<br/>Agency</h1>
 	</header>
+		<?php if(!$response) {?><div class="banner alert"><?=$message?></div><?php } ?>
 		<section class="section">
 			<h2>Connexion</h2>
 			<form action="../script/login_scr.php" method="post" class="form">
